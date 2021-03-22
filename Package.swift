@@ -10,15 +10,13 @@ let package = Package(
     products: [
         .library(
             name: "Antlr4",
-            type: .dynamic,
+            type: .static,
             targets: ["Antlr4"]),
     ],
     targets: [
         .target(
             name: "Antlr4",
-            dependencies: []),
-        .testTarget(
-            name: "Antlr4Tests",
-            dependencies: ["Antlr4"]),
+            dependencies: [],
+            path: "./runtime/Swift/Sources/Antlr4"),
     ]
 )
